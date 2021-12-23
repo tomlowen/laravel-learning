@@ -17,7 +17,17 @@ Route::get('/', function () {
     return view('welcome', ["name" => 'Tsdfsdgom']);
 });
 
-Route::get("/test", function () {
 
-    return view('test');
+Route::get('/posts/{anystring}', function ($anystring) {
+
+    $posts = [
+        "post-1" => "This is the first post",
+        "post-2" => "This is the second post",
+    ];
+
+    if (!array_key_exists($anystring, $posts)) {
+        abort(404, "This page doesn't exist");
+    }
+
+    return view('test', ["name" => $posts[$anystring]]);
 });

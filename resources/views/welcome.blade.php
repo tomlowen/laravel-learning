@@ -502,7 +502,7 @@
                         </svg>
 
                         <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                            Shopppppping!
+                            {{$name}}
                         </a>
 
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
